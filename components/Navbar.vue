@@ -26,7 +26,7 @@ const toggleVerticalNavbar = () => {
       <div class="items-center text-neutral-400 text-sm justify-end pe-3 hidden md:flex md:grow ">
         Welcome To Sena
       </div>
-      <div class="items-center justify-center hidden md:flex">
+      <div class="items-center justify-center hidden md:flex md:me-2">
         <img src="~/assets/maipark.gif" alt="logo" class="h-8" />
       </div>
     </div>

@@ -23,10 +23,10 @@ const lossEstimationModel = reactive({
 </script>
 
 <template>
-  <div class="bg-neutral-700 flex min-h-screen flex-col">
+  <div class="flex flex-col min-h-screen bg-neutral-700">
     <Navbar />
     <div class="md:flex flex-1 min-h-full p-3 space-y-3 md:space-y-0 md:space-x-3">
-      <div class="md:w-1/2 lg:w-5/12 p-3 flex flex-col">
+      <div class="flex flex-col md:w-1/2 lg:w-5/12 p-3">
         <div class="flex-1">
           <TabView>
             <TabPage title="Exposure">
@@ -83,11 +83,11 @@ const lossEstimationModel = reactive({
             </TabPage>
           </TabView>
         </div>
-        <div class="flex-none flex space-x-2 mt-3">
-          <button class="grow bg-neutral-300 hover:bg-neutral-500 text-black font-bold py-2 px-4 rounded">
+        <div class="flex flex-none space-x-2 mt-3">
+          <button class="flex-1 bg-neutral-300 hover:bg-neutral-500 text-black font-bold py-2 px-4 rounded-lg">
             Download CSV
           </button>
-          <button class="grow bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
+          <button class="flex-1 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded-lg">
             Generate
           </button>
         </div>
