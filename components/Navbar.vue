@@ -23,7 +23,7 @@ const toggleVerticalNavbar = () => {
       <div class="items-center hidden md:flex md:grow px-3">
         <NavList />
       </div>
-      <div class="items-center text-neutral-400 text-sm justify-end pe-3 hidden md:flex md:grow ">
+      <div class="items-center text-neutral-400 justify-end pe-3 hidden md:flex md:grow text-sm uppercase">
         Welcome To Sena
       </div>
       <div class="items-center justify-center hidden md:flex md:me-2">
