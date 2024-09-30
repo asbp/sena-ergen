@@ -21,15 +21,15 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-col">
-    <div class="flex w-100 mb-3">
+    <div class="flex w-100 bg-neutral-800 mb-3 text-sm">
       <template v-for="(tabPage, index) in tabPages">
-        <button class="grow bg-neutral-800 text-white p-3" @click="() => setActiveTab(index)"
-          :class="{ 'bg-neutral-600': activeTab === index }">
+        <button class="grow text-white p-3" @click="() => setActiveTab(index)"
+          :class="{ 'bg-neutral-500': activeTab === index }">
           {{ tabPage?.props?.title
           }}</button>
       </template>
     </div>
-    <div class="bg-neutral-800rounded">
+    <div class="bg-neutral-800 rounded">
       <component :is="tabPages?.[activeTab]" />
     </div>
   </div>
