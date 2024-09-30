@@ -25,7 +25,7 @@ const lossEstimationModel = reactive({
 <template>
   <div class="bg-neutral-700 flex min-h-screen flex-col">
     <Navbar />
-    <div class="md:flex md:flex-row flex-col p-3 space-y-3 md:space-x-3 md:space-y-0">
+    <div class="md:flex flex-1 min-h-full p-3 space-y-3 md:space-y-0 md:space-x-3">
       <div class="md:w-1/2 lg:w-5/12">
         <TabView>
           <TabPage title="Exposure">
