@@ -97,7 +97,7 @@ const lossEstimationModel = reactive({
               <SelectInput label="Expiry Date" v-model="exposureAtRiskModel.expiryDate">
                 <option value="1">Today</option>
               </SelectInput>
-              <div class="bg-neutral-600 p-5 rounded-md text-white flex flex-col">
+              <div class="bg-neutral-600 p-5 rounded-md text-white flex flex-col mt-6">
                 <div class="mb-3">Risk Impact</div>
                 <CheckboxInput label="Climate Change" v-model="exposureAtRiskModel.climateChange" />
                 <CheckboxInput label="Flood" v-model="exposureAtRiskModel.flood" />

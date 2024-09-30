@@ -25,7 +25,7 @@ onMounted(() => {
           }}</button>
       </template>
     </div>
-    <div class="bg-neutral-800 rounded h-full">
+    <div class="bg-neutral-800 rounded-lg p-6 h-full">
       <component :is="tabPages?.[activeTab]" />
     </div>
   </div>
