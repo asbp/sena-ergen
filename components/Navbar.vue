@@ -8,7 +8,7 @@ const toggleVerticalNavbar = () => {
 </script>
 
 <template>
-  <div class="bg-neutral-800 h-fit w-screen p-2">
+  <div class="bg-neutral-800 h-fit min-w-screen p-2">
     <div class="flex">
       <div class="flex items-center justify-center ms-4 md:ms-0 md:hidden">
         <button class="text-white" @click="() => toggleVerticalNavbar()">
