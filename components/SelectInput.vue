@@ -33,7 +33,7 @@ const nameComputed = computed(() => {
     <div class="w-1/2 relative inline-block">
       <select class="w-full appearance-none bg-neutral-600 text-white px-3 py-2 rounded-md" v-model="model"
         :name="nameComputed">
-        <option value="" disabled>Select an option</option>
+        <option value="" disabled selected>Select an option</option>
         <slot></slot>
         <template v-for="option in optionsComputed">
           <option :value="option.value">{{ option.label }}</option>
