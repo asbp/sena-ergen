@@ -9,3 +9,7 @@ export function filterSlots(slots: Slots, name: string) {
     return (vnode.type as any).__name === name || vnode.type === name;
   });
 }
+
+export function generateHexString(length: number) {
+  return Array.from({ length }, () => Math.floor(Math.random() * 16).toString(16)).join('');
+}

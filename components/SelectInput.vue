@@ -19,15 +19,20 @@ const optionsComputed = computed(() => {
   }
 
   return optionsResult;
-})
+});
+
+const nameComputed = computed(() => {
+  return props.name ?? ('select_' + generateHexString(32));
+});
 
 </script>
 
 <template>
   <div class="flex flex justify-between items-center mb-3 text-sm">
-    <label class="w-1/2 text-white">{{ props.label }}</label>
+    <label class="w-1/2 text-white" :for="nameComputed">{{ props.label }}</label>
     <div class="w-1/2 relative inline-block">
-      <select class="w-full appearance-none bg-neutral-600 text-white px-3 py-2 rounded-md" v-model="model">
+      <select class="w-full appearance-none bg-neutral-600 text-white px-3 py-2 rounded-md" v-model="model"
+        :name="nameComputed">
         <option value="" disabled>Select an option</option>
         <slot></slot>
         <template v-for="option in optionsComputed">
