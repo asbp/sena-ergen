@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 const exposureModel = reactive({
   underwritingYear: 2023,
   province: 1,
@@ -19,6 +20,11 @@ const exposureAtRiskModel = reactive({
   occupation: 1,
   exposureInterest: 1,
   expiryDate: 1,
+  climateChange: true,
+  flood: false,
+  earthquake: false,
+  tsunami: false,
+  liquefaction: false,
 });
 
 const lossEstimationModel = reactive({
@@ -91,6 +97,14 @@ const lossEstimationModel = reactive({
               <SelectInput label="Expiry Date" v-model="exposureAtRiskModel.expiryDate">
                 <option value="1">Today</option>
               </SelectInput>
+              <div class="bg-neutral-600 p-5 rounded-md text-white flex flex-col">
+                <div class="mb-3">Risk Impact</div>
+                <CheckboxInput label="Climate Change" v-model="exposureAtRiskModel.climateChange" />
+                <CheckboxInput label="Flood" v-model="exposureAtRiskModel.flood" />
+                <CheckboxInput label="Earthquake" v-model="exposureAtRiskModel.earthquake" />
+                <CheckboxInput label="Tsunami" v-model="exposureAtRiskModel.tsunami" />
+                <CheckboxInput label="Liquefaction" v-model="exposureAtRiskModel.liquefaction" />
+              </div>
             </TabPage>
             <TabPage title="Loss Estimation">
               <SelectInput label="Earthquake Event" v-model="lossEstimationModel.earthquakeEvent">
