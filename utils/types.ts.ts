@@ -8,4 +8,9 @@ export interface SelectInputProps extends /* @vue-ignore */ SelectHTMLAttributes
   options?: string[];
 }
 
+export interface SelectOption {
+  label: string;
+  value: string;
+}
+
 export type Slots = typeof import("vue")['useSlots'];
