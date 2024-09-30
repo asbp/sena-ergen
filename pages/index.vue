@@ -10,6 +10,17 @@ const exposureModel = reactive({
   expiryDate: 1,
 });
 
+const exposureAtRiskModel = reactive({
+  underwritingYear: 2023,
+  province: 1,
+  cityRegency: 1,
+  crestaZone: 1,
+  tariffZone: 1,
+  occupation: 1,
+  exposureInterest: 1,
+  expiryDate: 1,
+});
+
 const lossEstimationModel = reactive({
   earthquakeEvent: 1,
   province: 1,
@@ -56,7 +67,30 @@ const lossEstimationModel = reactive({
               </SelectInput>
             </TabPage>
             <TabPage title="Exposure at Risk">
-              Tab Exposure at Risk goes here.
+              <SelectInput label="Underwriting Year" v-model="exposureAtRiskModel.underwritingYear">
+                <option value="2023">2023</option>
+              </SelectInput>
+              <SelectInput label="Province" v-model="exposureAtRiskModel.province">
+                <option value="1">All</option>
+              </SelectInput>
+              <SelectInput label="City/Regency" v-model="exposureAtRiskModel.cityRegency">
+                <option value="1">All</option>
+              </SelectInput>
+              <SelectInput label="Cresta Zone" v-model="exposureAtRiskModel.crestaZone">
+                <option value="1">All</option>
+              </SelectInput>
+              <SelectInput label="Tariff Zone" v-model="exposureAtRiskModel.tariffZone">
+                <option value="1">All</option>
+              </SelectInput>
+              <SelectInput label="Occupation" v-model="exposureAtRiskModel.occupation">
+                <option value="1">All</option>
+              </SelectInput>
+              <SelectInput label="Exposure Interest" v-model="exposureAtRiskModel.exposureInterest">
+                <option value="1">All</option>
+              </SelectInput>
+              <SelectInput label="Expiry Date" v-model="exposureAtRiskModel.expiryDate">
+                <option value="1">Today</option>
+              </SelectInput>
             </TabPage>
             <TabPage title="Loss Estimation">
               <SelectInput label="Earthquake Event" v-model="lossEstimationModel.earthquakeEvent">
