@@ -4,14 +4,14 @@
     <div class="md:flex md:flex-row flex-col text-white p-3 space-y-3 md:space-x-3 md:space-y-0">
       <div class="w-100 md:p-3">
         <TabView>
-          <TabPage title="Tab 1">
-            Tab 1
+          <TabPage title="Exposure">
+            Tab Exposure goes here.
           </TabPage>
-          <TabPage title="Tab 2">
-            Tab 2
+          <TabPage title="Exposure at Risk">
+            Tab Exposure at Risk goes here.
           </TabPage>
-          <TabPage title="Tab 3">
-            Tab 3
+          <TabPage title="Loss Estimation">
+            Tab Loss Estimation goes here.
           </TabPage>
         </TabView>
         <div class="flex space-x-2 mt-3">
