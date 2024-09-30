@@ -15,10 +15,10 @@
           </TabPage>
         </TabView>
         <div class="flex space-x-2 mt-3">
-          <button class="grow bg-neutral-300 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">
+          <button class="grow bg-neutral-300 hover:bg-neutral-500 text-black font-bold py-2 px-4 rounded">
             Download CSV
           </button>
-          <button class="grow bg-yellow-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded">
+          <button class="grow bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
             Generate
           </button>
         </div>
