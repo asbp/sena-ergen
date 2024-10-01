@@ -14,7 +14,7 @@ export interface CheckboxInputProps extends /* @vue-ignore */ InputHTMLAttribute
 }
 
 export interface ButtonProps extends /* @vue-ignore */ ButtonHTMLAttributes {
-  baseColor?: string;
+  baseBackgroundColor?: string;
 }
 
 export type ObjectStructurePropsDefinition<T> = ComponentObjectPropsOptions<T>;

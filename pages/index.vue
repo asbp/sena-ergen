@@ -37,6 +37,10 @@ const lossEstimationModel = reactive({
   exposureInterest: 1,
 });
 
+const testClick = () => {
+  console.log('test click');
+}
+
 </script>
 
 <template>
@@ -140,12 +144,12 @@ const lossEstimationModel = reactive({
           </TabView>
         </div>
         <div class="flex flex-none space-x-2 mt-3">
-          <button class="flex-1 bg-neutral-300 hover:bg-neutral-500 text-black font-bold py-2 px-4 rounded-lg">
+          <Button class="flex-1 bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-800" @click="() => testClick()">
             Download CSV
-          </button>
-          <button class="flex-1 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded-lg">
+          </Button>
+          <Button class="flex-1 bg-yellow-500 hover:bg-yellow-700 active:bg-yellow-800" @click="() => testClick()">
             Generate
-          </button>
+          </Button>
         </div>
       </div>
       <div class="flex-1 bg-neutral-800 p-3 rounded">
