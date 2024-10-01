@@ -104,8 +104,10 @@ const testClick = () => {
                 <SelectInput label="Expiry Date" v-model="exposureAtRiskModel.expiryDate">
                   <option value="1">Today</option>
                 </SelectInput>
-                <div class="bg-neutral-600 p-5 rounded-md text-white flex flex-col mt-6">
-                  <div class="mb-3">Risk Impact</div>
+                <Panel class="bg-neutral-600 text-white rounded-md">
+                  <template #header>
+                    <span class="text-white">Risk Impact</span>
+                  </template>
                   <div class="space-y-3">
                     <CheckboxInput label="Climate Change" v-model="exposureAtRiskModel.climateChange" />
                     <CheckboxInput label="Flood" v-model="exposureAtRiskModel.flood" />
@@ -113,7 +115,7 @@ const testClick = () => {
                     <CheckboxInput label="Tsunami" v-model="exposureAtRiskModel.tsunami" />
                     <CheckboxInput label="Liquefaction" v-model="exposureAtRiskModel.liquefaction" />
                   </div>
-                </div>
+                </Panel>
               </div>
             </TabPage>
             <TabPage title="Loss Estimation">
@@ -143,7 +145,7 @@ const testClick = () => {
             </TabPage>
           </TabView>
         </div>
-        <div class="flex flex-none space-x-2 mt-3">
+        <div class="flex-none flex space-x-2 mt-3">
           <Button class="flex-1 bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-800" @click="() => testClick()">
             Download CSV
           </Button>
@@ -152,9 +154,11 @@ const testClick = () => {
           </Button>
         </div>
       </div>
-      <div class="flex-1 bg-neutral-800 p-3 rounded">
-        Preview goes here.
-      </div>
+      <Panel class="flex-1 bg-neutral-800 p-3 rounded">
+        <template #header>
+          <span class="text-white">Page Preview</span>
+        </template>
+      </Panel>
     </div>
   </div>
 </template>
