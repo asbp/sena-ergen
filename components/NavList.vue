@@ -5,6 +5,7 @@
     <a href="#" class="text-gray-300 hover:text-white">Exposure At Risk</a>
     <a href="#" class="text-gray-300 hover:text-white">Realtime Catastrophe Estimation</a>
     <a href="#" class="text-yellow-500">Report Generator</a>
+    <SidebarRightButtonGroup class="md:hidden"/>
     <img src="~/assets/maipark.gif" alt="logo" class="h-8 md:hidden" />
   </div>
 </template>

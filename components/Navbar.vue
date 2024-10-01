@@ -8,7 +8,7 @@ const toggleVerticalNavbar = () => {
 </script>
 
 <template>
-  <div class="bg-neutral-800 h-fit min-w-screen p-2">
+  <div class="bg-neutral-700 h-fit min-w-screen p-2">
     <div class="flex">
       <div class="flex items-center justify-center ms-4 md:ms-0 md:hidden">
         <button class="text-white" @click="() => toggleVerticalNavbar()">
@@ -23,7 +23,8 @@ const toggleVerticalNavbar = () => {
       <div class="items-center hidden md:flex md:grow px-3">
         <NavList />
       </div>
-      <div class="items-center text-neutral-400 justify-end pe-3 hidden md:flex md:grow text-sm uppercase">
+      <SidebarRightButtonGroup class="self-center hidden md:flex" />
+      <div class="items-center text-neutral-400 justify-end pe-3 hidden md:flex md:ms-3 text-sm uppercase">
         Welcome To Sena
       </div>
       <div class="items-center justify-center hidden md:flex md:me-2">

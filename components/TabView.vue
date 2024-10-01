@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-col h-full">
-    <div class="flex w-100 text-sm mb-3 bg-neutral-800">
+    <div class="flex w-100 text-sm mb-3 bg-neutral-700">
       <template v-for="(tabPage, index) in tabPages">
         <button class="flex-1 text-white p-3 transition-all" @click="() => onTabClick(index)"
           :class="{ 'bg-neutral-500': activeTab === index }">
@@ -39,7 +39,7 @@ onMounted(() => {
           }}</button>
       </template>
     </div>
-    <div class="bg-neutral-800 rounded-lg p-6 h-full">
+    <div class="bg-neutral-700 rounded-lg p-6 h-full">
       <component :is="tabPages?.[activeTab]" />
     </div>
   </div>

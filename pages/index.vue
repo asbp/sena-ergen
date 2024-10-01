@@ -56,7 +56,7 @@ const onTabChange = (index: number) => {
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen bg-neutral-700">
+  <div class="flex flex-col min-h-screen bg-neutral-600">
     <Navbar />
     <div class="md:flex flex-1 min-h-full p-3 space-y-3 md:space-y-0 md:space-x-3">
       <div class="flex flex-col md:w-1/2 lg:w-5/12 p-3">
@@ -158,15 +158,15 @@ const onTabChange = (index: number) => {
           </TabView>
         </div>
         <div class="flex-none flex space-x-2 mt-3">
-          <Button class="flex-1 bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-800">
+          <Button class="flex-1">
             Download CSV
           </Button>
-          <Button class="flex-1 bg-yellow-500 hover:bg-yellow-700 active:bg-yellow-800">
+          <Button class="flex-1 !text-black !bg-yellow-500 hover:!bg-yellow-400 active:!bg-yellow-600">
             Generate
           </Button>
         </div>
       </div>
-      <Panel class="flex-1 bg-neutral-800 p-3 rounded">
+      <Panel class="flex-1 bg-neutral-700 p-3 rounded">
         <template #header>
           <span class="text-white">Page Preview</span>
         </template>
