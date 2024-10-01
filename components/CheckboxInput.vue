@@ -11,7 +11,7 @@ const nameComputed = computed(() => {
 </script>
 
 <template>
-  <div class="mx-3 mb-3">
+  <div class="mx-3">
     <label class="relative h-6 w-full cursor-pointer flex items-center">
       <input type="checkbox" :name="nameComputed" class="peer sr-only" v-model="model" />
       <span
