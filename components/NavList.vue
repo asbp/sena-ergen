@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
 const props = withDefaults(defineProps<{
-  isOpen?: boolean;
+  isNavbarOpenOnNarrowViewport?: boolean;
 }>(), {
-  isOpen: false,
+  isNavbarOpenOnNarrowViewport: false,
 });
 
 </script>
@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
 <template>
   <div
     class="flex flex-col xl:flex xl:flex-row grow items-center uppercase text-sm space-x-0 space-y-3 xl:space-x-3 xl:space-y-0 pb-3 xl:pb-0"
-    :class="{ 'hidden': !isOpen }">
+    :class="{ 'hidden': !isNavbarOpenOnNarrowViewport }">
     <div class="flex flex-col xl:flex-row grow text-center text-white space-x-0 space-y-3 xl:space-x-3 xl:space-y-0 mt-3 xl:mt-0">
       <a href="#" class="hover:text-white">Exposure Management</a>
       <a href="#" class="hover:text-white">Exposure At Risk</a>
