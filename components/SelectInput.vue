@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { SelectInputProps, SelectOption } from '~/utils/types.ts';
+import type { SelectInputProps, SelectOption } from '~/utils/types';
 
 const model = defineModel();
 const slots = useSlots();

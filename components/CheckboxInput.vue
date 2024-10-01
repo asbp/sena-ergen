@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { type CheckboxInputProps } from '~/utils/types.ts';
+import { type CheckboxInputProps } from '~/utils/types';
 
 const props = defineProps<CheckboxInputProps>();
 const model = defineModel();
