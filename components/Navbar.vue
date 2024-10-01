@@ -8,31 +8,15 @@ const toggleVerticalNavbar = () => {
 </script>
 
 <template>
-  <div class="bg-neutral-700 h-fit min-w-screen p-2">
-    <div class="flex">
-      <div class="flex items-center justify-center ms-4 md:ms-0 md:hidden">
-        <button class="text-white" @click="() => toggleVerticalNavbar()">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="flex items-center justify-center grow md:flex-grow-0 pe-12 md:pe-0">
+  <div class="bg-neutral-700 h-fit min-w-screen p-2 flex flex-col xl:flex-row xl:space-x-3">
+    <div class="flex grow items-center xl:flex-grow-0 ps-3 xl:ps-0">
+      <button class="flex text-white xl:hidden" @click="() => toggleVerticalNavbar()">
+        <i class="ti ti-menu-2"></i>
+      </button>
+      <div class="flex grow justify-center pe-6 xl:pe-0">
         <img src="~/assets/logo.svg" alt="logo" class="h-10" />
       </div>
-      <div class="items-center hidden md:flex md:grow px-3">
-        <NavList />
-      </div>
-      <SidebarRightButtonGroup class="self-center hidden md:flex" />
-      <div class="items-center text-neutral-400 justify-end pe-3 hidden md:flex md:ms-3 text-sm uppercase">
-        Welcome To Sena
-      </div>
-      <div class="items-center justify-center hidden md:flex md:me-2">
-        <img src="~/assets/maipark.gif" alt="logo" class="h-8" />
-      </div>
     </div>
-    <VerticalNavbar :is-open="isVerticalNavbarOpen" />
+    <NavList :is-open="isVerticalNavbarOpen" />
   </div>
 </template>
-
-<style></style>

@@ -1,17 +1,27 @@
-<template>
-  <div
-    class="flex flex-col items-center uppercase text-sm md:flex-row space-x-0 space-y-4 md:space-x-4 md:space-y-0 my-4 md:my-0">
-    <a href="#" class="text-gray-300 hover:text-white">Exposure Management</a>
-    <a href="#" class="text-gray-300 hover:text-white">Exposure At Risk</a>
-    <a href="#" class="text-gray-300 hover:text-white">Realtime Catastrophe Estimation</a>
-    <a href="#" class="text-yellow-500">Report Generator</a>
-    <SidebarRightButtonGroup class="md:hidden"/>
-    <img src="~/assets/maipark.gif" alt="logo" class="h-8 md:hidden" />
-  </div>
-</template>
+<script setup lang="ts">
 
-<script lang="ts" setup>
+const props = withDefaults(defineProps<{
+  isOpen?: boolean;
+}>(), {
+  isOpen: false,
+});
 
 </script>
 
-<style></style>
+<template>
+  <div
+    class="flex flex-col xl:flex xl:flex-row grow items-center uppercase text-sm space-x-0 space-y-3 xl:space-x-3 xl:space-y-0 pb-3 xl:pb-0"
+    :class="{ 'hidden': !isOpen }">
+    <div class="flex flex-col xl:flex-row grow text-center space-x-0 space-y-3 xl:space-x-3 xl:space-y-0 mt-3 xl:mt-0">
+      <a href="#" class="text-gray-300 hover:text-white">Exposure Management</a>
+      <a href="#" class="text-gray-300 hover:text-white">Exposure At Risk</a>
+      <a href="#" class="text-gray-300 hover:text-white">Realtime Catastrophe Estimation</a>
+      <a href="#" class="text-yellow-500">Report Generator</a>
+    </div>
+    <SidebarRightButtonGroup />
+    <div class="items-center justify-end pe-3 text-neutral-400 hidden xl:flex xl:ms-3 text-sm uppercase">
+      Welcome To Sena
+    </div>
+    <img src="~/assets/maipark.gif" alt="logo" class="h-8 xl:pe-3" />
+  </div>
+</template>
