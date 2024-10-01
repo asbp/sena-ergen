@@ -1,5 +1,17 @@
 <script lang="ts" setup>
 
+const placeholderPageUrls = [
+  '/assets/page_placeholder/halaman1.jpg',
+  '/assets/page_placeholder/halaman2.jpg',
+  '/assets/page_placeholder/halaman3.jpg',
+];
+
+const currentPlaceholderPageUrlIndex = ref(0);
+
+const currentPlaceholderPageUrl = computed(() => {
+  return placeholderPageUrls[currentPlaceholderPageUrlIndex.value];
+});
+
 const exposureModel = reactive({
   underwritingYear: 2023,
   province: 1,
@@ -37,8 +49,8 @@ const lossEstimationModel = reactive({
   exposureInterest: 1,
 });
 
-const testClick = () => {
-  console.log('test click');
+const onTabChange = (index: number) => {
+  currentPlaceholderPageUrlIndex.value = index;
 }
 
 </script>
@@ -49,7 +61,7 @@ const testClick = () => {
     <div class="md:flex flex-1 min-h-full p-3 space-y-3 md:space-y-0 md:space-x-3">
       <div class="flex flex-col md:w-1/2 lg:w-5/12 p-3">
         <div class="flex-1">
-          <TabView>
+          <TabView @tab-change="onTabChange">
             <TabPage title="Exposure">
               <div class="space-y-3">
                 <SelectInput label="Underwriting Year" v-model="exposureModel.underwritingYear">
@@ -146,10 +158,10 @@ const testClick = () => {
           </TabView>
         </div>
         <div class="flex-none flex space-x-2 mt-3">
-          <Button class="flex-1 bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-800" @click="() => testClick()">
+          <Button class="flex-1 bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-800">
             Download CSV
           </Button>
-          <Button class="flex-1 bg-yellow-500 hover:bg-yellow-700 active:bg-yellow-800" @click="() => testClick()">
+          <Button class="flex-1 bg-yellow-500 hover:bg-yellow-700 active:bg-yellow-800">
             Generate
           </Button>
         </div>
@@ -158,6 +170,9 @@ const testClick = () => {
         <template #header>
           <span class="text-white">Page Preview</span>
         </template>
+        <div class="flex justify-center mt-3">
+          <img :src="currentPlaceholderPageUrl" alt="Page Preview" class="w-4/5 h-auto" />
+        </div>
       </Panel>
     </div>
   </div>
