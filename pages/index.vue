@@ -60,7 +60,7 @@ const onTabChange = (index: number) => {
     <Navbar />
     <div class="md:flex flex-1 min-h-full p-3 space-y-3 md:space-y-0 md:space-x-3">
       <div class="flex flex-col md:w-1/2 lg:w-5/12">
-        <div class="flex-1">
+        <div class="">
           <TabView @tab-change="onTabChange">
             <TabPage title="Exposure">
               <div class="space-y-3">
@@ -166,7 +166,7 @@ const onTabChange = (index: number) => {
           </Button>
         </div>
       </div>
-      <Panel class="flex-1 bg-neutral-700 p-3">
+      <Panel class="flex-1 bg-neutral-700 !h-fit p-3">
         <template #header>
           <span class="text-white lg:text-lg">Report Preview</span>
         </template>
