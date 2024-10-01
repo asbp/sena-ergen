@@ -59,7 +59,7 @@ const onTabChange = (index: number) => {
   <div class="flex flex-col min-h-screen bg-neutral-600">
     <Navbar />
     <div class="md:flex flex-1 min-h-full p-3 space-y-3 md:space-y-0 md:space-x-3">
-      <div class="flex flex-col md:w-1/2 lg:w-5/12 md:p-3">
+      <div class="flex flex-col md:w-1/2 lg:w-5/12">
         <div class="flex-1">
           <TabView @tab-change="onTabChange">
             <TabPage title="Exposure">
