@@ -168,9 +168,9 @@ const onTabChange = (index: number) => {
       </div>
       <Panel class="flex-1 bg-neutral-700 p-3">
         <template #header>
-          <span class="text-white">Page Preview</span>
+          <span class="text-white lg:text-lg">Report Preview</span>
         </template>
-        <div class="flex justify-center mt-3">
+        <div class="flex justify-center">
           <img :src="currentPlaceholderPageUrl" alt="Page Preview" class="w-4/5 h-auto" />
         </div>
       </Panel>
