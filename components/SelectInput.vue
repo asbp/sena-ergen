@@ -31,8 +31,9 @@ const nameComputed = computed(() => {
   <div class="flex flex justify-between items-center text-sm">
     <label class="w-1/2 text-white" :for="nameComputed">{{ props.label }}</label>
     <div class="w-1/2 relative inline-block">
-      <select class="w-full appearance-none bg-neutral-600 text-white px-3 py-2 rounded-md" v-model="model"
-        :id="nameComputed" :name="nameComputed">
+      <select
+        class="w-full appearance-none bg-neutral-600 text-white px-3 py-2 rounded-md transition-all focus:outline-none focus:ring-4 focus:ring-white"
+        v-model="model" :id="nameComputed" :name="nameComputed">
         <option value="" disabled selected>Select an option</option>
         <slot></slot>
         <template v-for="option in optionsComputed">
