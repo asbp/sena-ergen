@@ -47,87 +47,95 @@ const lossEstimationModel = reactive({
         <div class="flex-1">
           <TabView>
             <TabPage title="Exposure">
-              <SelectInput label="Underwriting Year" v-model="exposureModel.underwritingYear">
-                <option value="2023">2023</option>
-              </SelectInput>
-              <SelectInput label="Province" v-model="exposureModel.province">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="City/Regency" v-model="exposureModel.cityRegency">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Cresta Zone" v-model="exposureModel.crestaZone">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Tariff Zone" v-model="exposureModel.tariffZone">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Occupation" v-model="exposureModel.occupation">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Exposure Interest" v-model="exposureModel.exposureInterest">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Expiry Date" v-model="exposureModel.expiryDate">
-                <option value="1">Today</option>
-              </SelectInput>
+              <div class="space-y-3">
+                <SelectInput label="Underwriting Year" v-model="exposureModel.underwritingYear">
+                  <option value="2023">2023</option>
+                </SelectInput>
+                <SelectInput label="Province" v-model="exposureModel.province">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="City/Regency" v-model="exposureModel.cityRegency">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Cresta Zone" v-model="exposureModel.crestaZone">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Tariff Zone" v-model="exposureModel.tariffZone">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Occupation" v-model="exposureModel.occupation">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Exposure Interest" v-model="exposureModel.exposureInterest">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Expiry Date" v-model="exposureModel.expiryDate">
+                  <option value="1">Today</option>
+                </SelectInput>
+              </div>
             </TabPage>
             <TabPage title="Exposure at Risk">
-              <SelectInput label="Underwriting Year" v-model="exposureAtRiskModel.underwritingYear">
-                <option value="2023">2023</option>
-              </SelectInput>
-              <SelectInput label="Province" v-model="exposureAtRiskModel.province">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="City/Regency" v-model="exposureAtRiskModel.cityRegency">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Cresta Zone" v-model="exposureAtRiskModel.crestaZone">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Tariff Zone" v-model="exposureAtRiskModel.tariffZone">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Occupation" v-model="exposureAtRiskModel.occupation">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Exposure Interest" v-model="exposureAtRiskModel.exposureInterest">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Expiry Date" v-model="exposureAtRiskModel.expiryDate">
-                <option value="1">Today</option>
-              </SelectInput>
-              <div class="bg-neutral-600 p-5 rounded-md text-white flex flex-col mt-6">
-                <div class="mb-3">Risk Impact</div>
-                <CheckboxInput label="Climate Change" v-model="exposureAtRiskModel.climateChange" />
-                <CheckboxInput label="Flood" v-model="exposureAtRiskModel.flood" />
-                <CheckboxInput label="Earthquake" v-model="exposureAtRiskModel.earthquake" />
-                <CheckboxInput label="Tsunami" v-model="exposureAtRiskModel.tsunami" />
-                <CheckboxInput label="Liquefaction" v-model="exposureAtRiskModel.liquefaction" />
+              <div class="space-y-3">
+                <SelectInput label="Underwriting Year" v-model="exposureAtRiskModel.underwritingYear">
+                  <option value="2023">2023</option>
+                </SelectInput>
+                <SelectInput label="Province" v-model="exposureAtRiskModel.province">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="City/Regency" v-model="exposureAtRiskModel.cityRegency">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Cresta Zone" v-model="exposureAtRiskModel.crestaZone">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Tariff Zone" v-model="exposureAtRiskModel.tariffZone">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Occupation" v-model="exposureAtRiskModel.occupation">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Exposure Interest" v-model="exposureAtRiskModel.exposureInterest">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Expiry Date" v-model="exposureAtRiskModel.expiryDate">
+                  <option value="1">Today</option>
+                </SelectInput>
+                <div class="bg-neutral-600 p-5 rounded-md text-white flex flex-col mt-6">
+                  <div class="mb-3">Risk Impact</div>
+                  <div class="space-y-3">
+                    <CheckboxInput label="Climate Change" v-model="exposureAtRiskModel.climateChange" />
+                    <CheckboxInput label="Flood" v-model="exposureAtRiskModel.flood" />
+                    <CheckboxInput label="Earthquake" v-model="exposureAtRiskModel.earthquake" />
+                    <CheckboxInput label="Tsunami" v-model="exposureAtRiskModel.tsunami" />
+                    <CheckboxInput label="Liquefaction" v-model="exposureAtRiskModel.liquefaction" />
+                  </div>
+                </div>
               </div>
             </TabPage>
             <TabPage title="Loss Estimation">
-              <SelectInput label="Earthquake Event" v-model="lossEstimationModel.earthquakeEvent">
-                <option value="1">Gempa Cianjur 5.4 M</option>
-              </SelectInput>
-              <SelectInput label="Province" v-model="lossEstimationModel.province">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="City/Regency" v-model="lossEstimationModel.cityRegency">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Cresta Zone" v-model="lossEstimationModel.crestaZone">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Tariff Zone" v-model="lossEstimationModel.tariffZone">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Occupation" v-model="lossEstimationModel.occupation">
-                <option value="1">All</option>
-              </SelectInput>
-              <SelectInput label="Exposure Interest" v-model="lossEstimationModel.exposureInterest">
-                <option value="1">All</option>
-              </SelectInput>
+              <div class="space-y-3">
+                <SelectInput label="Earthquake Event" v-model="lossEstimationModel.earthquakeEvent">
+                  <option value="1">Gempa Cianjur 5.4 M</option>
+                </SelectInput>
+                <SelectInput label="Province" v-model="lossEstimationModel.province">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="City/Regency" v-model="lossEstimationModel.cityRegency">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Cresta Zone" v-model="lossEstimationModel.crestaZone">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Tariff Zone" v-model="lossEstimationModel.tariffZone">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Occupation" v-model="lossEstimationModel.occupation">
+                  <option value="1">All</option>
+                </SelectInput>
+                <SelectInput label="Exposure Interest" v-model="lossEstimationModel.exposureInterest">
+                  <option value="1">All</option>
+                </SelectInput>
+              </div>
             </TabPage>
           </TabView>
         </div>
