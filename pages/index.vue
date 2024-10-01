@@ -157,7 +157,7 @@ const onTabChange = (index: number) => {
             </TabPage>
           </TabView>
         </div>
-        <div class="flex-none flex space-x-2 mt-3">
+        <div class="flex-none flex space-x-2 mt-3 mx-3">
           <Button class="flex-1 !rounded-full">
             Download CSV
           </Button>
