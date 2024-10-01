@@ -36,7 +36,8 @@ onMounted(() => {
   <div class="flex flex-col h-full">
     <div class="flex w-100 text-sm mb-3 bg-neutral-700 rounded first:rounded-s last:rounded-e">
       <template v-for="(tabPage, index) in tabPages">
-        <button class="flex-1 text-white p-3 transition-all outline-none focus:ring focus:ring-white first:rounded-s last:rounded-e"
+        <button
+          class="flex-1 text-white p-3 transition-all outline-none focus-visible:ring focus-visible:ring-white first:rounded-s last:rounded-e"
           @click="() => onTabClick(index)" :class="{ 'bg-neutral-500': activeTab === index }">
           {{ tabPage?.props?.title }}
         </button>
