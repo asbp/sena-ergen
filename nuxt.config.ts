@@ -39,5 +39,17 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {}
     }
-  }
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          hashCharacters: "hex",
+          chunkFileNames: `_nuxt/chunks/[name].[hash:16].js`,
+          entryFileNames: '_nuxt/js/[name].[hash:16].js',
+          assetFileNames: '_nuxt/[name].[hash:16].[ext]'
+        },
+      },
+    },
+  },
 })
