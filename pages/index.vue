@@ -89,6 +89,7 @@ const onTabChange = (index: number) => {
                   <option value="1">Today</option>
                 </SelectInput>
               </div>
+              <ReportButtonGenerator />
             </TabPage>
             <TabPage title="Exposure at Risk">
               <div class="space-y-3">
@@ -129,6 +130,7 @@ const onTabChange = (index: number) => {
                   </div>
                 </Panel>
               </div>
+              <ReportButtonGenerator />
             </TabPage>
             <TabPage title="Loss Estimation">
               <div class="space-y-3">
@@ -154,16 +156,9 @@ const onTabChange = (index: number) => {
                   <option value="1">All</option>
                 </SelectInput>
               </div>
+              <ReportButtonGenerator />
             </TabPage>
           </TabView>
-        </div>
-        <div class="flex-none flex space-x-2 mt-3 mx-3">
-          <Button class="flex-1 !rounded-full">
-            Download CSV
-          </Button>
-          <Button class="flex-1 !rounded-full !text-black !bg-yellow-500 hover:!bg-yellow-400 active:!bg-yellow-600">
-            Generate
-          </Button>
         </div>
       </div>
       <Panel class="flex-1 bg-neutral-700 !h-fit p-3">
