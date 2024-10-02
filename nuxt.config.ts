@@ -45,9 +45,9 @@ export default defineNuxtConfig({
       rollupOptions: {
         output: {
           hashCharacters: "hex",
-          chunkFileNames: `_nuxt/chunks/[name].[hash:16].js`,
-          entryFileNames: '_nuxt/js/[name].[hash:16].js',
-          assetFileNames: '_nuxt/[name].[hash:16].[ext]'
+          chunkFileNames: `_nuxt/chunks.[name].[hash:16].js`,
+          entryFileNames: '_nuxt/entry.[name].[hash:16].js',
+          assetFileNames: '_nuxt/asset.[name].[hash:16].[ext]'
         },
       },
     },
